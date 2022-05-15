@@ -74,16 +74,16 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Hi there, It's Reda"
+    Content: Welcome
 
   socialIcons:
     - name: twitter
-      url: "https://twitter.com/"
+      url: "https://twitter.com/redomy1"
     - name: stackoverflow
-      url: "https://stackoverflow.com"
+      url: "https://stackoverflow.com/users/9802019/reda-el-hail?tab=profile"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/redaelhail"
 
   analytics:
     google:
