@@ -1,0 +1,5 @@
+  build:
+    image: klakegg/hugo
+    command: new site src
+    volumes:
+      - "./:/src"
