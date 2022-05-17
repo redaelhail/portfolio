@@ -58,7 +58,7 @@ params:
   profileMode:
     enabled: True # needs to be explicitly set
     title: Phd researcher in machine learning
-    subtitle: Contact me
+    subtitle: Contact
     imageUrl: 'https://avatars.githubusercontent.com/u/29822993?s=400&u=84cf5c59f9a2d42ed32ae0a1f523de81f418b53f&v=4'
     imageWidth: 170
     imageHeight: 170
