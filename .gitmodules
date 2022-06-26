@@ -7,3 +7,6 @@
 [submodule "src/themes/researcher"]
 	path = src/themes/researcher
 	url = https://github.com/ojroques/hugo-researcher.git
+[submodule "src/themes/mini"]
+	path = src/themes/mini
+	url = https://github.com/nodejh/hugo-theme-mini
