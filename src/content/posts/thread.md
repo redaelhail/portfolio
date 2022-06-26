@@ -4,6 +4,8 @@ date: 2022-26-06T03:24:31Z
 draft: false
 ---
 
+Threads is one of the most important concepts in programming.
+
 
 ## What is a thread?
 
