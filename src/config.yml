@@ -18,7 +18,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Reda El Hail
-  description: "Personal website"
+  description: "Blog & Portfolio"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
@@ -57,17 +57,17 @@ params:
   # profile-mode
   profileMode:
     enabled: True # needs to be explicitly set
-    title: Phd researcher in machine learning
+    title: Phd researcher in ML
     subtitle: Contact
     imageUrl: 'pic.jpg'
-    imageWidth: 170
-    imageHeight: 170
+    imageWidth: 180
+    imageHeight: 180
     imageTitle: my image
     buttons:      
       - name: Posts
         url: posts
-      - name: Tags
-        url: tags
+      - name: About
+        url: /about
 
   # home-info mode
   homeInfoParams:
@@ -82,7 +82,7 @@ params:
     - name: github
       url: "https://github.com/redaelhail"
     - name: orcid
-      url: "https://orcid.com/"
+      url: "https://orcid.org/"
     - name: linkedin
       url: "https://www.linkedin.com/in/reda2021/"
     - name: goodreads
@@ -117,5 +117,9 @@ menu:
     - identifier: posts
       name: Posts
       url: /posts/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
       weight: 30
     
