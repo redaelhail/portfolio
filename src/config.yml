@@ -59,7 +59,7 @@ params:
     enabled: True # needs to be explicitly set
     title: Phd researcher in machine learning
     subtitle: Contact
-    imageUrl: '\static\pic.jpg'
+    imageUrl: 'https://personal-website-71a.pages.dev/static/pic.jpg'
     imageWidth: 170
     imageHeight: 170
     imageTitle: my image
