@@ -1,7 +1,7 @@
 baseURL: "https://personal-website-71a.pages.dev/"
 title: Reda El Hail
 paginate: 5
-theme: PaperMod
+theme: researcher
 
 
 enableRobotsTXT: true

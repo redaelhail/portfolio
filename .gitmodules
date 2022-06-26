@@ -1,3 +1,6 @@
 [submodule "src/themes/PaperMod"]
 	path = src/themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/researcher"]
+	path = themes/researcher
+	url = https://github.com/ojroques/hugo-researcher.git
