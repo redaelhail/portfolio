@@ -59,7 +59,7 @@ params:
     enabled: True # needs to be explicitly set
     title: Phd researcher in machine learning
     subtitle: Contact
-    imageUrl: 'https://personal-website-71a.pages.dev/static/pic.jpg'
+    imageUrl: 'pic.jpg'
     imageWidth: 170
     imageHeight: 170
     imageTitle: my image
@@ -114,15 +114,8 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
     - identifier: posts
       name: Posts
       url: /posts/
       weight: 30
-    - identifier: archives
-      name: Archives
-      url: /archives/
-      weight: 30
+    
