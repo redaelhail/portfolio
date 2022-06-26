@@ -59,7 +59,7 @@ params:
     enabled: True # needs to be explicitly set
     title: Phd researcher in machine learning
     subtitle: Contact
-    imageUrl: 'https://raw.githubusercontent.com/redaelhail/personal-website/main/src/static/pic.jpg?token=GHSAT0AAAAAABTWAPYD53ML57OOZMARIFOEYU6JBVA'
+    imageUrl: 'https://raw.githubusercontent.com/redaelhail/blog-website/main/src/static/pic.jpg?token=GHSAT0AAAAAABV6CQKVXPG3SGXPPMDVPLHMYVXXW4A'
     imageWidth: 170
     imageHeight: 170
     imageTitle: my image
