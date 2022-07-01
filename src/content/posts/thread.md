@@ -7,18 +7,17 @@ draft: false
 Threads is one of the most important concepts in programming.
 
 
-## What is a thread?
+## A. What is a thread?
 
 TODO
 
-## Why use Threading?
+## B. Why use Threading?
 
 Source code: http://www.dabeaz.com/usenix2009/concurrent/
 
+##  C. Thread synchronization
 
-###  Thread synchronization
-
-**Shared data and race problem**
+### 1. Shared data and race problem
 
 To respond to this question, let's launch two threads with no synchronization. The two threads called `foo` and `bar` are using the same variable `x`. One of them tries to increase the value with `1`  and the other subtract `1`
 
@@ -74,14 +73,170 @@ When threads are not synchronized in accessing shared data, we are talking about
 3. `Events`
 4. `Semaphores`
 
+### 2. Locks
 
-## Locks
+It is a lock that can be acquired or released by any thread. When a thread A acquires the lock with `lock.acquire`, no other thread can access the variables until the thread A finishes its execution and runs `lock.release
 
 
-## Rlocks
-`Rlock` is the abbreviation of re-entering lock. Its
-Its a lock that can be acquired or released by any thread. When a thread A acquires the lock with `lock.acquire`, no other thread can access the variables until the thread A finishes its execution and runs `lock.release
+    import threading
 
-## Events
+    x      = 0                   # A shared value
+    x_lock = threading.Lock()    # A lock for synchronizing access to x
 
-## Semaphores
+    COUNT = 1000000
+    def foo():
+        global x
+        for i in range(COUNT):
+            x_lock.acquire()
+            x += 1
+            x_lock.release()
+
+    def bar():
+        global x
+        for i in range(COUNT):
+            x_lock.acquire()
+            x -= 1
+            x_lock.release()
+
+    t1 = threading.Thread(target=foo)
+    t2 = threading.Thread(target=bar)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    print (x)
+
+**Output**:
+
+    PS \projects\threading> python lock.py
+    0
+
+### 3. Rlocks
+`Rlock` is the abbreviation of re-entering lock. Which means a Lock that can be acquired many times. So the thread who owns the lock is the last one who was calling Rlock. and not yet unlocking.
+
+    import threading
+
+    class Foo(object):
+        lock = threading.RLock()
+        def __init__(self):
+            self.x = 0
+        def add(self,n):
+            with Foo.lock:
+                print("adder")
+                self.x += n
+        def incr(self):
+            with Foo.lock:
+                print("subber")
+                self.add(1)
+        def decr(self):
+            with Foo.lock:
+                self.add(-1)
+
+    # Two functions that will run in separate threads and call methods
+    # on the above class.
+
+    def adder(f,count):
+        while count > 0:
+            f.incr()
+            count -= 1
+
+    def subber(f,count):
+        while count > 0:
+            f.decr()
+            count -= 1
+
+    # Create some threads and make sure it works
+    COUNT = 10
+    f = Foo()
+    t1 = threading.Thread(target=adder,args=(f,COUNT))
+    t2 = threading.Thread(target=subber,args=(f,COUNT))
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    print (f.x)
+    import threading
+
+    class Foo(object):
+        lock = threading.RLock()
+        def __init__(self):
+            self.x = 0
+        def add(self,n):
+            with Foo.lock:
+                print("adder")
+                self.x += n
+        def incr(self):
+            with Foo.lock:
+                print("subber")
+                self.add(1)
+        def decr(self):
+            with Foo.lock:
+                self.add(-1)
+
+    # Two functions that will run in separate threads and call methods
+    # on the above class.
+
+    def adder(f,count):
+        while count > 0:
+            f.incr()
+            count -= 1
+
+    def subber(f,count):
+        while count > 0:
+            f.decr()
+            count -= 1
+
+    # Create some threads and make sure it works
+    COUNT = 10
+    f = Foo()
+    t1 = threading.Thread(target=adder,args=(f,COUNT))
+    t2 = threading.Thread(target=subber,args=(f,COUNT))
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    print (f.x)
+
+**Output**:
+
+    PS \projects\threading> python rlock.py
+    991536
+### 4. Events
+
+### 5. Semaphores
+
+# D. Queues 
+
+## Concept
+
+## Inter Thread communication
+
+## Example
+
+    import threading
+    import time
+    from queue import Queue
+
+    done = threading.Semaphore(0)
+    q = Queue()
+
+    def producer(queue):
+        
+        print ("I'm the producer and I produce data.")
+        print ("Producer is going to sleep.")
+        time.sleep(10)
+        item = "Hello"
+        q.put(item)
+        print ("Producer is alive. Signaling the consumer.")
+        done.release()
+
+    def consumer(queue):
+        print ("I'm a consumer and I wait for data.")
+        print ("Consumer is waiting.")
+        done.acquire()
+        print ("Consumer got", queue.get())
+
+    t1 = threading.Thread(target=producer, args=[q])
+    t2 = threading.Thread(target=consumer, args=[q])
+    t1.start()
+    t2.start()
