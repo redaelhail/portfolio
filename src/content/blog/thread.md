@@ -236,13 +236,13 @@ It is a lock that can be acquired or released by any thread. When a thread A acq
 
 ### 5. Semaphores
 
-#Queues 
+## Queues 
 
-## Concept
+### Concept
 
-## Inter Thread communication
+### Inter Thread communication
 
-## Example
+### Example
 
     import threading
     import time

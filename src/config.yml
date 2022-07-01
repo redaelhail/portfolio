@@ -64,8 +64,6 @@ params:
     imageHeight: 180
     imageTitle: my image
     buttons:      
-      - name: Blog
-        url: blog
       - name: About
         url: /about
 
@@ -82,7 +80,7 @@ params:
     - name: github
       url: "https://github.com/redaelhail"
     - name: orcid
-      url: "https://orcid.org/"
+      url: "https://orcid.org/0000-0001-9369-0810"
     - name: linkedin
       url: "https://www.linkedin.com/in/reda2021/"
     - name: goodreads
