@@ -64,8 +64,8 @@ params:
     imageHeight: 180
     imageTitle: my image
     buttons:      
-      - name: Posts
-        url: posts
+      - name: Blog
+        url: blog
       - name: About
         url: /about
 
@@ -115,16 +115,13 @@ params:
 menu:
   main:
     - identifier: about
-        name: About
-        url: /about/
-        weight: 30
+      name: about
+      url: /about/
+      weight: 30
     - identifier: blog
       name: Blog
       url: /blog/
       weight: 30
-    - identifier: publications
-      name: Publications
-      url: /publications/
-      weight: 30
+    
     
     
