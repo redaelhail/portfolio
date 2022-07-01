@@ -118,9 +118,9 @@ menu:
         name: About
         url: /about/
         weight: 30
-    - identifier: posts
-      name: Posts
-      url: /posts/
+    - identifier: blog
+      name: Blog
+      url: /blog/
       weight: 30
     - identifier: publications
       name: Publications
