@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://personal-website-71a.pages.dev/sitemap.xml
