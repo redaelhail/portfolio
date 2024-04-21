@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reda El Hail</title>
+    <link>redaelhail.github.io/blog-website/</link>
+    <description>Recent content on Reda El Hail</description>
+    <image>
+      <url>https://avatars.githubusercontent.com/u/29822993?s=400&u=84cf5c59f9a2d42ed32ae0a1f523de81f418b53f&v=4</url>
+      <link>https://avatars.githubusercontent.com/u/29822993?s=400&u=84cf5c59f9a2d42ed32ae0a1f523de81f418b53f&v=4</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 15 May 2022 13:24:31 +0000</lastBuildDate><atom:link href="redaelhail.github.io/blog-website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>redaelhail.github.io/blog-website/about/</link>
+      <pubDate>Sun, 26 Jun 2022 19:24:06 +0000</pubDate>
+      
+      <guid>redaelhail.github.io/blog-website/about/</guid>
+      <description>My name is Reda, a Phd in KU Leuven Belgium, working on machine learning applied on radar sensors data to recognize human indoor activities. My goal is to prove that its possible to recognize indoor activities for single/multiple persons using a single FMCW radar sensor. Another goal is to be able to run the pre-processing and the prediction algorithm on the edge.</description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>redaelhail.github.io/blog-website/blog/first/</link>
+      <pubDate>Sun, 15 May 2022 13:24:31 +0000</pubDate>
+      
+      <guid>redaelhail.github.io/blog-website/blog/first/</guid>
+      <description>Stop all docker containers: docker kill $(docker ps -q) Remove all docker containers: docker rm $(docker ps -a -q) Remmove all docker images: docker rmi $(docker images -q) The -q flag will only list the IDs for those containers.
+Volumes create volume docker volume create name_volume
+this will create automatically a volume mounted on the specified contaainer docker run -it -v name of volume klakegg/hugo &amp;quot;new site web&amp;quot;
+remove volume docker volume rm name_volume</description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>redaelhail.github.io/blog-website/blog/pyqt/</link>
+      <pubDate>Sun, 15 May 2022 13:24:31 +0000</pubDate>
+      
+      <guid>redaelhail.github.io/blog-website/blog/pyqt/</guid>
+      <description></description>
+    </item>
+    
+    
+    <item>
+      <title>Threading in Python</title>
+      <link>redaelhail.github.io/blog-website/blog/thread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>redaelhail.github.io/blog-website/blog/thread/</guid>
+      <description>Threads is one of the most important concepts in programming.
+What is a thread? TODO
+Why use Threading? Source code: http://www.dabeaz.com/usenix2009/concurrent/
+Thread synchronization 1. Shared data and race problem To respond to this question, let&amp;rsquo;s launch two threads with no synchronization. The two threads called foo and bar are using the same variable x. One of them tries to increase the value with 1 and the other subtract 1
+# A simple example of a race conditionimport threadingx = 0 # A shared valueCOUNT = 10000000def foo():global xfor i in range(COUNT):x += 1def bar():global xfor i in range(COUNT):x -= 1t1 = threading.</description>
+    </item>
+    
+  </channel>
+</rss>

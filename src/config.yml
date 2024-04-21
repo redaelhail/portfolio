@@ -1,4 +1,4 @@
-baseURL: "https://redaelhail.com/"
+baseURL: "https://personal-website-71a.pages.dev/"
 title: Reda El Hail
 paginate: 5
 theme: PaperMod
@@ -18,7 +18,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Reda El Hail
-  description: "Personal website"
+  description: "Blog & Portfolio"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
@@ -40,7 +40,7 @@ params:
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
@@ -57,17 +57,15 @@ params:
   # profile-mode
   profileMode:
     enabled: True # needs to be explicitly set
-    title: Phd researcher in machine learning
+    title: Phd researcher in ML
     subtitle: Contact
-    imageUrl: 'https://raw.githubusercontent.com/redaelhail/personal-website/main/src/static/pic.jpg?token=GHSAT0AAAAAABTWAPYD53ML57OOZMARIFOEYU6JBVA'
-    imageWidth: 170
-    imageHeight: 170
+    imageUrl: 'pic.jpg'
+    imageWidth: 180
+    imageHeight: 180
     imageTitle: my image
     buttons:      
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+      - name: About
+        url: /about
 
   # home-info mode
   homeInfoParams:
@@ -82,7 +80,7 @@ params:
     - name: github
       url: "https://github.com/redaelhail"
     - name: orcid
-      url: "https://orcid.com/"
+      url: "https://orcid.org/0000-0001-9369-0810"
     - name: linkedin
       url: "https://www.linkedin.com/in/reda2021/"
     - name: goodreads
@@ -114,15 +112,14 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: about
+      name: About
+      url: /about/
       weight: 30
-    - identifier: archives
-      name: Archives
-      url: /archives/
+    - identifier: blog
+      name: Blog
+      url: /blog/
       weight: 30
+    
+    
+    
