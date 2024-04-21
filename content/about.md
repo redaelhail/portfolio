@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: June 26, 2022
+date: Wed June 26, 2022
 draft: false
 ---
 

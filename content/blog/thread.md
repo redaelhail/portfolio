@@ -1,6 +1,6 @@
 ---
 title: "Threading in Python"
-date: 2022-26-06T03:24:31Z
+date: Sun June 26, 2022
 draft: false
 ---
 
