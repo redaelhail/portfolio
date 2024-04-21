@@ -65,11 +65,11 @@ params:
     imageTitle: my image
     buttons:      
       - name: About
-        url: /about
+        url: portfolio/about
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there, It's Reda"
+    Title: "Hi there"
     Content: Welcome
 
   socialIcons:

@@ -1,7 +1,7 @@
 ---
 title: "docker"
 date: 2022-05-15T13:24:31Z
-draft: true
+draft: false
 ---
 
 - Stop all docker containers: docker kill $(docker ps -q)
