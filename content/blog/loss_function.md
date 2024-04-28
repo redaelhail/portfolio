@@ -4,20 +4,6 @@ markup: "html"
 date: Wed June 16, 2023
 draft: "false"
 ---
-<div>
-    <p>Click anywhere on the function heatmap to start a minimization. You can toggle the different algorithms (SGD, Momentum, RMSProp, Adam) by clicking
-    on the circles in the lower bar.</p>
-    <p>The global minimum is on the left. A local minimum is found on the right.</p>
-    <p>Interestingly, different initializations make some algorithms converge to the local minimum while others converge to the global minimum.</p>
-    <p><em>Note:</em> The learning rate is 1e-2 for Adam, SGD with Momentum and RMSProp, while it is 2e-2 for SGD (to make it converge faster)</p>
-    <p>The algorithms are:</p>
-    <ol>
-        <li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">SGD</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent#Momentum">Momentum gradient descent</a></li>
-        <li><a href="http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf">RMSProp</a></li>
-        <li><a href="http://arxiv.org/abs/1412.6980">Adam</a></li>
-    </ol>
-</div>
 
 <div id="visualization-container"></div>
 
@@ -350,6 +336,20 @@ function minimize(x0,y0) {
 
 </script>
 
+<div>
+    <p>Click anywhere on the function heatmap to start a minimization. You can toggle the different algorithms (SGD, Momentum, RMSProp, Adam) by clicking
+    on the circles in the lower bar.</p>
+    <p>The global minimum is on the left. A local minimum is found on the right.</p>
+    <p>Interestingly, different initializations make some algorithms converge to the local minimum while others converge to the global minimum.</p>
+    <p><em>Note:</em> The learning rate is 1e-2 for Adam, SGD with Momentum and RMSProp, while it is 2e-2 for SGD (to make it converge faster)</p>
+    <p>The algorithms are:</p>
+    <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">SGD</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent#Momentum">Momentum gradient descent</a></li>
+        <li><a href="http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf">RMSProp</a></li>
+        <li><a href="http://arxiv.org/abs/1412.6980">Adam</a></li>
+    </ol>
+</div>
 
 
 
