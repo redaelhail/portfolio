@@ -5,6 +5,71 @@ date: Wed June 16, 2023
 draft: "false"
 ---
 
+<h2>1. Gradient Descent</h2>
+<p><strong>Equation:</strong></p>
+<p>θ = θ - α * ∇J(θ)</p>
+<p><strong>Description:</strong></p>
+<ul>
+  <li><strong>θ:</strong> Parameters (weights) of the model being optimized.</li>
+  <li><strong>α (alpha):</strong> Learning rate, determines the size of the steps taken during optimization.</li>
+  <li><strong>∇J(θ):</strong> Gradient of the cost function with respect to the parameters.</li>
+</ul>
+
+<h2>2. Stochastic Gradient Descent (SGD)</h2>
+<p><strong>Equation:</strong></p>
+<p>θ = θ - α * ∇J(θ, xi, yi)</p>
+<p><strong>Description:</strong></p>
+<ul>
+  <li><strong>θ:</strong> Parameters (weights) of the model being optimized.</li>
+  <li><strong>α (alpha):</strong> Learning rate, determines the size of the steps taken during optimization.</li>
+  <li><strong>∇J(θ, xi, yi):</strong> Gradient of the cost function with respect to the parameters computed on a single training example (xi, yi).</li>
+</ul>
+
+<h2>3. Momentum</h2>
+<p><strong>Equation:</strong></p>
+<p>v = β * v + (1 - β) * ∇J(θ)</p>
+<p>θ = θ - α * v</p>
+<p><strong>Description:</strong></p>
+<ul>
+  <li><strong>θ:</strong> Parameters (weights) of the model being optimized.</li>
+  <li><strong>α (alpha):</strong> Learning rate, determines the size of the steps taken during optimization.</li>
+  <li><strong>β:</strong> Momentum coefficient, controls the influence of the past gradients.</li>
+  <li><strong>v:</strong> Momentum term, which accumulates the exponentially decaying moving average of past gradients.</li>
+  <li><strong>∇J(θ):</strong> Gradient of the cost function with respect to the parameters.</li>
+</ul>
+
+<h2>4. RMSprop (Root Mean Square Propagation)</h2>
+<p><strong>Equation:</strong></p>
+<p>v = β * v + (1 - β) * (∇J(θ))^2</p>
+<p>θ = θ - α * ∇J(θ) / (sqrt(v) + ε)</p>
+<p><strong>Description:</strong></p>
+<ul>
+  <li><strong>θ:</strong> Parameters (weights) of the model being optimized.</li>
+  <li><strong>α (alpha):</strong> Learning rate, determines the size of the steps taken during optimization.</li>
+  <li><strong>β:</strong> RMSprop decay rate, controls the exponential moving average of squared gradients.</li>
+  <li><strong>v:</strong> RMSprop term, which accumulates the exponentially decaying moving average of squared gradients.</li>
+  <li><strong>∇J(θ):</strong> Gradient of the cost function with respect to the parameters.</li>
+  <li><strong>ε (epsilon):</strong> Small constant to prevent division by zero.</li>
+</ul>
+
+
+<h2>5. Adam (Adaptive Moment Estimation)</h2>
+<p><strong>Equation:</strong></p>
+<p>m = β1 * m + (1 - β1) * ∇J(θ)<br>
+v = β2 * v + (1 - β2) * (∇J(θ))^2<br>
+θ = θ - α * m / (sqrt(v) + ε)</p>
+<p><strong>Description:</strong></p>
+<ul>
+  <li><strong>θ:</strong> Parameters (weights) of the model being optimized.</li>
+  <li><strong>α (alpha):</strong> Learning rate, determines the size of the steps taken during optimization.</li>
+  <li><strong>β1, β2:</strong> Exponential decay rates for the moment estimates.</li>
+  <li><strong>m:</strong> First moment (mean) estimate.</li>
+  <li><strong>v:</strong> Second moment (uncentered variance) estimate.</li>
+  <li><strong>∇J(θ):</strong> Gradient of the cost function with respect to the parameters.</li>
+  <li><strong>ε (epsilon):</strong> Small constant to prevent division by zero.</li>
+</ul>
+
+
 <div id="visualization-container"></div>
 
 <style>
@@ -356,3 +421,4 @@ function minimize(x0,y0) {
 <div>
 So this demo sows how quickly Adam optmizer converges with respect to other optimizers due to intoduced momenteum term in the opitimization problem.
 </div>
+
