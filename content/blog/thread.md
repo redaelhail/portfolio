@@ -1,7 +1,7 @@
 ---
 title: "Threading in Python"
 date: Sun June 26, 2022
-draft: false
+draft: true
 ---
 
 Threads is one of the most important concepts in programming.
