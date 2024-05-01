@@ -72,17 +72,16 @@ params:
 
   socialIcons:
     - name: twitter
-      url: "https://twitter.com/redomy1"
-    - name: stackoverflow
-      url: "https://stackoverflow.com/users/9802019/reda-el-hail?tab=topactivity"
+      url: "https://twitter.com/redaelhail"
     - name: github
       url: "https://github.com/redaelhail"
     - name: orcid
       url: "https://orcid.org/0000-0001-9369-0810"
     - name: linkedin
       url: "https://www.linkedin.com/in/reda2021/"
-    - name: goodreads
-      url: "https://www.goodreads.com/user/show/58225884-reda-elh"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/9802019/reda-el-hail?tab=topactivity"
+
 
   analytics:
     google:

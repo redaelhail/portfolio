@@ -2,27 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>redaelhail.github.io/blog-website/about/</loc>
-    <lastmod>2022-06-26T19:24:06+00:00</lastmod>
+    <loc>https://redaelhail.github.io/portfolio/about/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/blog/</loc>
-    <lastmod>2022-05-15T13:24:31+00:00</lastmod>
+    <loc>https://redaelhail.github.io/portfolio/archives/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/blog/first/</loc>
-    <lastmod>2022-05-15T13:24:31+00:00</lastmod>
+    <loc>https://redaelhail.github.io/portfolio/blog/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/blog/pyqt/</loc>
-    <lastmod>2022-05-15T13:24:31+00:00</lastmod>
+    <loc>https://redaelhail.github.io/portfolio/categories/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/</loc>
-    <lastmod>2022-05-15T13:24:31+00:00</lastmod>
+    <loc>https://redaelhail.github.io/portfolio/blog/first/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/archives/</loc>
+    <loc>https://redaelhail.github.io/portfolio/blog/phd_demo/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/categories/</loc>
+    <loc>https://redaelhail.github.io/portfolio/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/tags/</loc>
+    <loc>https://redaelhail.github.io/portfolio/tags/</loc>
   </url><url>
-    <loc>redaelhail.github.io/blog-website/blog/thread/</loc>
+    <loc>https://redaelhail.github.io/portfolio/blog/loss_function/</loc>
   </url>
 </urlset>

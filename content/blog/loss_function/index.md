@@ -1,9 +1,10 @@
 ---
 title: "Visualization of different optimization algorithms used in deep learning"
-markup: "html"
-date: Wed June 16, 2023
-draft: false
+date: 2023-05-01T07:21:52Z
+draft: true
+markup: html
 ---
+
 
 <h2>1. Gradient Descent</h2>
 <p><strong>Equation:</strong></p>
