@@ -21,4 +21,4 @@ As a PhD researcher and a teaching assistant at KU Leuven, I am pursuing my pass
 I had the pleasure to give talks in the following conferences:
 
 - [Dutch Biomedical Engineering Conference 2023](https://www.bme2023.nl/)
-- [GeeksBlaBla: A conference for the moroccan tech community titled: MLFlow, a platform to streamline machine learning workflows](https://www.youtube.com/watch?v=rVLlGQcXgOQ&t=5829s)
+- [GeeksBlaBla: A conference for the moroccan tech community titled: **MLFlow, a platform to streamline machine learning workflows**](https://youtu.be/rVLlGQcXgOQ?t=16393)

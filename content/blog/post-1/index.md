@@ -22,10 +22,11 @@ The technologies that were used to make this demo are:
         <li>C++: signal processing on the sensor</li>
         <li>Python:
             <ul>
-                <li>Tensorflow: Training the model</li>
-                <li>PyQT/PyQtgraph: Graphical user interface and visualization</li>
-                <li>Threading / Queue: To manage threads execution</li>
-                <li>Numpy, yaml ...</li>
+                <li>**Tensorflow**: Training the model</li>
+                <li>**MLFlow**: EExperiments tracking</li>
+                <li>**PyQT/PyQtgraph**: Graphical user interface and visualization</li>
+                <li>**Threading / Queue**: To manage threads execution</li>
+                <li>**Numpy, yaml ...** </li>
             </ul>
         </li>
         <li>Docker: Utilized for developing the demo on a laptop and deploying it on a Raspberry Pi using a Python Docker image tailored for Raspberry Pi, streamlining deployment across other devices.</li>
