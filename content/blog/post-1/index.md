@@ -19,14 +19,14 @@ This schematic shows the workflow of the demo from the sensor edge to the cloud.
 The technologies that were used to make this demo are:
     <ul>
         <li>Os: Ubuntu, Raspbian</li>
-        <li>C++: signal processing on the sensor</li>
+        <li>C++: signal processing on the sensor's microcontrolller</li>
         <li>Python:
             <ul>
-                <li>**Tensorflow**: Training the model</li>
-                <li>**MLFlow**: EExperiments tracking</li>
-                <li>**PyQT/PyQtgraph**: Graphical user interface and visualization</li>
-                <li>**Threading / Queue**: To manage threads execution</li>
-                <li>**Numpy, yaml ...** </li>
+                <li><b>Tensorflow</b>: Training the model </li>
+                <li><b>MLFlow</b>: Experiments tracking</li>
+                <li><b>PyQT/PyQtgraph</b>: Graphical user interface and visualization</li>
+                <li><b>Threading / Queue</b>: To manage threads execution</li>
+                <li><b>Scikit-learn, Numpy ...</b> </li>
             </ul>
         </li>
         <li>Docker: Utilized for developing the demo on a laptop and deploying it on a Raspberry Pi using a Python Docker image tailored for Raspberry Pi, streamlining deployment across other devices.</li>
