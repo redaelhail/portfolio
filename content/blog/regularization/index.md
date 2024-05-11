@@ -11,7 +11,7 @@ Regularization is a widely used technique since it  brings a positive impact on 
 
 Regularization is a technique that helps a machine learning model avoid overfitting and enhance it generalization capabilities over unseen data.
 
-## 2. ***Regularization techniques***
+##  ***Regularization techniques***
 
 ### 1. **L1, L2 regularization**
 
@@ -45,6 +45,8 @@ During a training process, the input's distribution of each layer is changing in
 Batch normalization starts with normalizing the output of the previous layer, and then sets a new distribution with a new mean and variance to be learned during the training process. This helps into stabilizng the learning process and have a faster convergence.
 
 ![alt Batch normalization figure](batchnormalization.png "Batch normalization")
+
+Now the question that surges is: **why batch normalization can be considered as regularization technique?** I will try to look into this later.
 
 
 These regularization techniques can be used individually or in combination to improve the performance and generalization of machine learning models across various domains and tasks.
