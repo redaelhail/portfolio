@@ -37,7 +37,7 @@ Dropout acts as a form of ensemble learning, where multiple subnetworks are trai
 
 ![alt Dropout figure](dropout.png "Dropout ")
 
-##3. **Batch normalization**
+### 3. **Batch normalization**
 
 During a training process, the input's distribution of each layer is changing in each step. This slows down the training process since the layers has to continuously adapt to the new distribution of the input. This problem is referred to as ***internal covariate shift***.
 
