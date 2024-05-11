@@ -24,7 +24,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["https://avatars.githubusercontent.com/u/29822993?s=400&u=84cf5c59f9a2d42ed32ae0a1f523de81f418b53f&v=4"]
   DateFormat: "Mon January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: light # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
