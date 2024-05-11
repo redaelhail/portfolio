@@ -7,13 +7,13 @@ draft: false
 Regularization is a widely used technique since it  brings a positive impact on the model's performance. However, there are many methods of regularization. I will try to go through some of them in this post.
 
 
-# 1. ***First, what is regularization?***
+## ***First, what is regularization?***
 
 Regularization is a technique that helps a machine learning model avoid overfitting and enhance it generalization capabilities over unseen data.
 
-# 2. ***Regularization techniques***
+## 2. ***Regularization techniques***
 
-## 1. **L1, L2 regularization**
+### 1. **L1, L2 regularization**
 
 L2 and L1 regularization put a constraint on the model's weights an biases. This constraint is present in the loss function as follow:
 
@@ -26,7 +26,7 @@ Since the optimizer tries to minimize the loss function, then the second term wi
 In essence, this implies that the model complexity will be lower. How? Imagine a model weight is now equal to zero. Then all connections from the previous layer to this neuron have no effect on the model output, with this  only the neurons that have the most impact on the output are kept.
 
 
-## 2. **Dropout**
+### 2. **Dropout**
 
 The concept is simple: during training, randomly selected neurons are temporarily dropped out or ignored, along with their connections, with a certain probability. 
 
