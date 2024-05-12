@@ -29,7 +29,9 @@ docker volume create name_volume This will automatically create a volume mounted
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redaelhail.github.io/portfolio/blog/phd_demo/</guid>
-      <description>These videos show a demonstration of indoor human activity recognition using FMCW radar and machine learning. The radar is placed in h roof and it has a field of view covering 120 degrees in all directions.The schematic below shows the full system from the sensor node to the cloud.This demo runs a convolutional neural network that was trained on a previously collected dataset in the same environment with different people.</description>
+      <description>These videos show a demonstration of indoor human activity recognition using FMCW radar and machine learning. The radar is placed in h roof and it has a field of view covering 120 degrees in all directions.
+The schematic below shows the full system from the sensor node to the cloud.
+This demo runs a convolutional neural network that was trained on a previously collected dataset in the same environment with different people.</description>
     </item>
     
     <item>
@@ -38,13 +40,19 @@ docker volume create name_volume This will automatically create a volume mounted
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://redaelhail.github.io/portfolio/blog/loss_function/</guid>
-      <description>1. Gradient DescentEquation:
+      <description>1. Gradient Descent
+Equation:
 θ = θ - α * ∇J(θ)
 Description:
-θ: Parameters (weights) of the model being optimized.α (alpha): Learning rate, determines the size of the steps taken during optimization.∇J(θ): Gradient of the cost function with respect to the parameters.2. Stochastic Gradient Descent (SGD)Equation:
+θ: Parameters (weights) of the model being optimized.
+α (alpha): Learning rate, determines the size of the steps taken during optimization.
+∇J(θ): Gradient of the cost function with respect to the parameters.
+2. Stochastic Gradient Descent (SGD)
+Equation:
 θ = θ - α * ∇J(θ, xi, yi)
 Description:
-θ: Parameters (weights) of the model being optimized.α (alpha): Learning rate, determines the size of the steps taken during optimization.</description>
+θ: Parameters (weights) of the model being optimized.
+α (alpha): Learning rate, determines the size of the steps taken during optimization.</description>
     </item>
     
   </channel>

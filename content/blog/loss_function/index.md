@@ -3,6 +3,7 @@ title: "Visualization of different optimization algorithms used in deep learning
 date: 2023-05-01T07:21:52Z
 draft: true
 markup: html
+tags: [Machine Llearning]
 ---
 
 

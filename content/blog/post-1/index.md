@@ -3,6 +3,7 @@ title: Radar human activity recognition with machine learning
 date: 2024-05-01T07:06:09Z
 draft: false
 markup: html
+tags: [Machine Learning, Python, C, Docker]
 ---
 
 During my phd years, I made a demo of indoor human activity recognition using FMCW radar and machine learning. The schematic below shows the end to end system from the sensor node to the cloud. I was involved in the different stages of this work from the sensor configuration and the signal processing to building a convolutional neural network for Doppler maps classification.
