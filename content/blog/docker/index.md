@@ -1,96 +1,68 @@
 ---
-title: "Docker cheat sheet"
+title: "Docker for code developement and deployement on a RaspberryPi"
 date: 2023-09-07T07:26:41Z
-draft: true
+draft: false
+tags: [Docker]
 ---
 
-## Containers
+## Intro
 
-### Stop all Docker containers
+Lately, I had to develop a demo working on a raspberrypi and send it to some project partners. However, it was very difficult in the beginning, since whenever I change something and push it to GitHub, they were not aware of that, and also faced problems with dependecies sometimes. So I decided to solve this problem and use a Docker container.
 
-Stop all Docker containers:
-```bash
-docker kill $(docker ps -q)
-```
+The first step was to check if Docker runs on RaspberryPi, which is the case. Then, I used the same Docker container and use on my laptop with a bind mount to develop code on the computer. It's much more easier. Finally when the demo is working on the laptop, I push it to GitHub, and a GitHub action is automatically making a new Docker image and build it in Docker Hub. This image can be then pulled by the rasperrypi and garenteed to work.
 
-### Remove all Docker containers
+This was a high level description. Let's get into the steps I followed. 
 
-Remove all Docker containers:
-```bash
-docker rm $(docker ps -a -q)
-```
+## 1. Install Docker runtime
 
-### Remove all Docker images
+To install Docker runtime on a RaspberryPi, it's straightforward by following this [steps](https://docs.docker.com/engine/install/raspberry-pi-os/).
 
-Remove all Docker images:
-```bash
-docker rmi $(docker images -q)
-```
+## 2. Write a **DockerFile**:
 
-The `-q` flag will only list the IDs for those containers.
+This Dockerfile sets up a Python environment, installs dependencies from requirements_pi.txt, and specifies the command to run the application. I intentinally used `python:3.11-slim-bookworm` for its low memory size since I am deploying on an edge device.
 
-## Volumes
+    ```yml
+    # Python runtime as the base image
+    FROM python:3.11-slim-bookworm
 
-### Create volume
+    # Set the working directory in the container
+    WORKDIR ./demonstrator
 
-Create volume:
-```bash
-docker volume create name_volume
-```
+    # Copy the requirements file into the container
+    COPY requirements_pi.txt .
 
-This will automatically create a volume mounted on the specified container:
-```bash
-docker run -it -v name_of_volume klakegg/hugo "new site web"
-```
+    # Install any needed packages specified in requirements.txt
+    RUN pip install --upgrade pip
+    RUN pip install --no-cache-dir -r requirements_pi.txt
 
-### Remove volume
+    # Command to run your application
+    CMD ["python", "main.py"]
+    ```
+## 3. Set up **compose.yml** file
 
-Remove volume:
-```bash
-docker volume rm name_volume
-```
+This Docker Compose file sets up a service named `python_env` to build an image using the Dockerfile in the current directory. It mounts the current directory to `/demonstrator` in the container, runs the command `python main.py`, and ensures the service restarts automatically.
 
-### Remove container and corresponding volumes
+    ```yml
+    version: '3.8'
 
-Remove container and corresponding volumes:
-```bash
-docker rm -v mysql_db_1
-```
+    services:
+    python_env:
+        build:
+        context: .
+        dockerfile: Dockerfile
 
-If we don’t remove the anonymous volume and the container together, it becomes a dangling volume. We can list and remove all the dangling volumes using the following commands:
-```bash
-docker volume ls -qf dangling=true
-docker volume rm $(docker volume ls -qf dangling=true)
-```
+        working_dir: /demonstrator
+        volumes:
+        - .:/demonstrator
+        privileged: true
+        command: ["python", "main.py"]
+        restart: always
+    ```
 
-### Remove unused volumes
+Once the Dockerfile and compose file  are ready, it is possible to edit code on the host machine and run it in an Docker container since we are using a bind mount. we can now do code developement and test on the laptop before deploying on the RaspberryPi.
 
-Remove unused volumes:
-```bash
-docker volume prune
-```
+In other words, starting a container with bind mounts allows to use a container to run tools that we don't want to install on our host, and yet still work with our host's files.
 
-### List volumes
+## 4. Run
 
-List volumes:
-```bash
-docker volume ls
-```
-
-## Bind Mounts
-
-It is possible to start a container with bind mounts. This allows us to use a container to run tools that we don't want to install on our host, and yet still work with our host's files:
-```bash
-docker run -v $(pwd):/var/opt/project bash:latest bash -c "echo Hello > /var/opt/project/file.txt"
-```
-
-## Inspect Volume
-
-### Inspect volume
-
-Inspect volume:
-```bash
-docker volume inspect <volume_name>
-```
-
-
+Finally, launching the demo is simply done with a single command: `docker compose up`
