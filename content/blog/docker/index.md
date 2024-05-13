@@ -1,7 +1,7 @@
 ---
 title: "Docker for code developement and deployement on a RaspberryPi"
 date: 2023-09-07T07:26:41Z
-draft: false
+draft: true
 tags: [Docker]
 ---
 
@@ -21,7 +21,7 @@ To install Docker runtime on a RaspberryPi, it's straightforward by following th
 
 This Dockerfile sets up a Python environment, installs dependencies from requirements_pi.txt, and specifies the command to run the application. I intentinally used `python:3.11-slim-bookworm` for its low memory size since I am deploying on an edge device.
 
-    ```yml
+
     # Python runtime as the base image
     FROM python:3.11-slim-bookworm
 
@@ -37,12 +37,12 @@ This Dockerfile sets up a Python environment, installs dependencies from require
 
     # Command to run your application
     CMD ["python", "main.py"]
-    ```
+
 ## 3. Set up **compose.yml** file
 
 This Docker Compose file sets up a service named `python_env` to build an image using the Dockerfile in the current directory. It mounts the current directory to `/demonstrator` in the container, runs the command `python main.py`, and ensures the service restarts automatically.
 
-    ```yml
+
     version: '3.8'
 
     services:
@@ -57,7 +57,7 @@ This Docker Compose file sets up a service named `python_env` to build an image 
         privileged: true
         command: ["python", "main.py"]
         restart: always
-    ```
+
 
 Once the Dockerfile and compose file  are ready, it is possible to edit code on the host machine and run it in an Docker container since we are using a bind mount. we can now do code developement and test on the laptop before deploying on the RaspberryPi.
 
