@@ -21,9 +21,9 @@ L2 and L1 regularization put a constraint on the model's weights an biases. This
                 Loss = task loss + ∑(Norm(weight))
 
 
-Since the optimizer tries to minimize the loss function, then the second term will be minimized. If the norm used is L1 (Lasso) then the weights are pushed towards zero, wich creates more sparcity in the model. On the other hand, if the norm is L2 (Ridge) which is also called weight decay, then it tends to spread out the weight evenly and less likely to push them towards zero.
+Since the optimizer seeks to minimize the loss function, the second term will consequently be minimized. If the norm used is L1 (Lasso), then the weights are pushed towards zero, creating more sparsity in the model. On the other hand, if the norm is L2 (Ridge), also known as weight decay, it tends to distribute the weights evenly and is less likely to force them towards zero.
 
-In essence, this implies that the model complexity will be lower. How? Imagine a model weight is now equal to zero. Then all connections from the previous layer to this neuron have no effect on the model output, with this  only the neurons that have the most impact on the output are kept.
+Essentially, this implies that the model complexity will be lower. How? Consider a scenario where a model weight is now zero. Consequently, all connections from the previous layer to this neuron have no effect on the model output. Consequently, only the neurons with the most significant impact on the output are retained.
 
 
 ### 2. **Dropout**
@@ -39,7 +39,7 @@ Dropout acts as a form of ensemble learning, where multiple subnetworks are trai
 
 ### 3. **Batch normalization**
 
-During a training process, the input's distribution of each layer is changing in each step. This slows down the training process since the layers has to continuously adapt to the new distribution of the input. This problem is referred to as ***internal covariate shift***.
+During the training process, the input's distribution of each layer is changing in each step. This slows down the training process since the layers has to continuously adapt to the new distribution of the input. This problem is referred to as ***internal covariate shift***.
 
 
 Batch normalization starts with normalizing the output of the previous layer, and then sets a new distribution with a new mean and variance to be learned during the training process. This helps into stabilizng the learning process and have a faster convergence.
