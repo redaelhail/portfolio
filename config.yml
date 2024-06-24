@@ -1,4 +1,5 @@
-baseURL: "https://redaelhail.github.io/portfolio/"
+baseURL: "/"
+languageCode: 'en-us'
 title: Reda El Hail
 paginate: 5
 theme: PaperMod
