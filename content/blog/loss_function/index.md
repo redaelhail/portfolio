@@ -1,13 +1,16 @@
 ---
-title: "Visualization of different optimization algorithms used in deep learning"
+title: "Visualizing optimization algorithms"
 date: 2023-05-01T07:21:52Z
-draft: true
+draft: false
 markup: html
 tags: [Machine Llearning]
 ---
 
 
 <h2>1. Gradient Descent</h2>
+
+Gradient descent is an optimization algorithm that iteratively adjusts model parameters to minimize a function, typically a loss function. By moving in the direction of the steepest decrease, determined by the gradient, it helps find the optimal parameters that best fit the data.
+
 <p><strong>Equation:</strong></p>
 <p>θ = θ - α * ∇J(θ)</p>
 <p><strong>Description:</strong></p>
@@ -18,6 +21,7 @@ tags: [Machine Llearning]
 </ul>
 
 <h2>2. Stochastic Gradient Descent (SGD)</h2>
+Unlike traditional gradient descent, which uses the entire dataset, SGD updates the model using a single or small batch of data points per iteration. This makes it faster and helps avoid local minima, though it can lead to a noisier convergence path.
 <p><strong>Equation:</strong></p>
 <p>θ = θ - α * ∇J(θ, xi, yi)</p>
 <p><strong>Description:</strong></p>
@@ -28,6 +32,7 @@ tags: [Machine Llearning]
 </ul>
 
 <h2>3. Momentum</h2>
+Momentum is an optimization technique used in machine learning to accelerate gradient descent by taking into account the past gradients when updating model parameters. Instead of just relying on the current gradient, momentum adds a fraction of the previous update to the current one. This helps in smoothing out the updates, allowing the algorithm to maintain direction and avoid oscillations, especially in regions with steep gradients. By building up velocity in directions of consistent gradients, momentum helps the optimization process converge faster and can help the model escape local minima.
 <p><strong>Equation:</strong></p>
 <p>v = β * v + (1 - β) * ∇J(θ)</p>
 <p>θ = θ - α * v</p>
@@ -41,6 +46,7 @@ tags: [Machine Llearning]
 </ul>
 
 <h2>4. RMSprop (Root Mean Square Propagation)</h2>
+Root Mean Square Propagation is an adaptive learning rate optimization algorithm. It adjusts the learning rate for each parameter based on the average of the squared gradients from previous iterations. By keeping a moving average of the squared gradients, RMSProp helps mitigate the issue of vanishing or exploding gradients, ensuring more stable and efficient convergence.
 <p><strong>Equation:</strong></p>
 <p>v = β * v + (1 - β) * (∇J(θ))^2</p>
 <p>θ = θ - α * ∇J(θ) / (sqrt(v) + ε)</p>
@@ -56,6 +62,7 @@ tags: [Machine Llearning]
 
 
 <h2>5. Adam (Adaptive Moment Estimation)</h2>
+Adam combines the benefits of two other methods: momentum and RMSprop. It computes adaptive learning rates for each parameter by maintaining exponentially decaying averages of past gradients (momentum) and their squared values (RMSprop). This approach allows Adam to adjust the learning rate dynamically, leading to faster convergence and better handling of noisy or sparse gradients.
 <p><strong>Equation:</strong></p>
 <p>m = β1 * m + (1 - β1) * ∇J(θ)<br>
 v = β2 * v + (1 - β2) * (∇J(θ))^2<br>
@@ -404,23 +411,11 @@ function minimize(x0,y0) {
 </script>
 
 <div>
-    <p>Click anywhere on the function heatmap to start a minimization. You can toggle the different algorithms (SGD, Momentum, RMSProp, Adam) by clicking
-    on the circles in the lower bar.</p>
-    <p>The global minimum is on the left. A local minimum is found on the right.</p>
-    <p>Interestingly, different initializations make some algorithms converge to the local minimum while others converge to the global minimum.</p>
+    <p>Click anywhere on the function heatmap to start a minimization. You can toggle the different algorithms (SGD, Momentum, RMSProp, Adam) by clicking on the circles in the lower bar.</p>
+    <p>The global minimum is on the left. A local minimum is found on the right. Interestingly, different initializations make some algorithms converge to the local minimum while others converge to the global minimum.</p>
     <p><em>Note:</em> The learning rate is 1e-2 for Adam, SGD with Momentum and RMSProp, while it is 2e-2 for SGD (to make it converge faster)</p>
-    <p>The algorithms are:</p>
-    <ol>
-        <li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">SGD</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent#Momentum">Momentum gradient descent</a></li>
-        <li><a href="http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf">RMSProp</a></li>
-        <li><a href="http://arxiv.org/abs/1412.6980">Adam</a></li>
-    </ol>
 </div>
-
-
 
 <div>
-So this demo sows how quickly Adam optmizer converges with respect to other optimizers due to intoduced momenteum term in the opitimization problem.
+So this demo sows how quickly Adam optmizer converges with respect to other optimizers due to intoduced momenteum term in the opitimization problem. The source code of this visualization is from this <a href ="https://github.com/EmilienDupont/optimization-visualization">GitHub repo of Emilien Dupont.</a>
 </div>
-

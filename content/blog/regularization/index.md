@@ -1,6 +1,6 @@
 ---
-title: Explanation of regularization techniques
-date: 2024-05-11T19:51:35Z
+title: Regularization techniques
+date: 2023-08-11T19:51:35Z
 draft: false
 ---
 
