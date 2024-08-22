@@ -1,6 +1,6 @@
 ---
 title: "Radar signal processing for target detection and tracking"
-date: 2023-08-11T10:33:41Z
+date: 2024-08-11T10:33:41Z
 draft: false
 markup: html
 ---
@@ -36,7 +36,7 @@ A chirp is the signal emitted by the radar's antennas. It has a frequency that i
 
 <p>These parameters directly influence the Doppler resolution, which can be calculated using the following formula:<code>v = &lambda; / (2 &middot; T<sub>f</sub>)</code> where <code>T<sub>f</sub></code> is the frame time. Additionally, the maximum Doppler value is determined by:<code>v<sub>max</sub> = &lambda; / (4 &middot; T<sub>c</sub>)</code>. The relationship between frame time and chirp duration is given by <code>T<sub>f</sub> = N &middot; T<sub>c</sub></code>, where <code>N</code> is the number of chirps and <code>T<sub>c</sub></code> is the duration of a single chirp.</p>
 
-It is important to choose the right values of the parameters defined above, because they directly define the 4 defining parameters of any application: Doppler and range resolution and maximum range and Doppler values.
+<p>It is important to choose the right values of the parameters defined above, because they directly define the 4 defining parameters of any application: Doppler and range resolution and maximum range and Doppler values.</p>
 
 <h2 id="Virtual antenna"> Antenna Array </h2>
 
@@ -47,8 +47,8 @@ It is important to choose the right values of the parameters defined above, beca
 
 <h2 id="Radar cube"> Radar data</h2>
 
-Let's visualize the radar data structure, because that is the most important step to start the signal processing and understand how the radar data is organized.
-From the definition of a frame, a 2D array can be constructed containing chirps and their corresponding samples. This array relates to a single transmit-receive antenna pair. Now if all antennas in the virtual array are considered, a 3D radar data cube is constructed with the following dimensions: (samples, chirps, antennas)
+<p>Let's visualize the radar data structure, because that is the most important step to start the signal processing and understand how the radar data is organized.
+From the definition of a frame, a 2D array can be constructed containing chirps and their corresponding samples. This array relates to a single transmit-receive antenna pair. Now if all antennas in the virtual array are considered, a 3D radar data cube is constructed with the following dimensions: (samples, chirps, antennas)</p>
 
 <center><img src="images/data_cube.jpg" alt="Data cube" width="500" height="450"></center>
 
@@ -62,7 +62,7 @@ From the definition of a frame, a 2D array can be constructed containing chirps 
 
 <h2>Moving target indicator </h2>
 
-MTI operates by analyzing the Doppler/Range shift, which is the frequency change in the reflected signal caused by the relative motion between the radar and the target. By measuring phase shifts between successive radar returns, MTI can identify moving targets while filtering out signals from stationary objects. 
+<p>MTI operates by analyzing the Doppler/Range shift, which is the frequency change in the reflected signal caused by the relative motion between the radar and the target. By measuring phase shifts between successive radar returns, MTI can identify moving targets while filtering out signals from stationary objects. </p>
 
 
 <center><img src="images/Moving-target-indication-infographic.jpg" alt="range doppler response" width="700" height="200"></center>
@@ -76,6 +76,6 @@ Other variants of MTI usnig different transfer functions such as :
 
 <center><p><code>H(z) = (1 - z<sup>-1</sup>) / (1 - 0.9z<sup>-1</sup>)</code></p></center>
 
-In this transfer function, the numerator <code>1 - z<sup>-1</sup></code> effectively implements a high-pass filter that subtracts the previous input signal from the current one, thereby filtering out signals that do not change over time (i.e., stationary objects). The denominator <code>1 - 0.9z<sup>-1</sup></code> introduces a pole near the origin, which allows the filter to emphasize changes or motion over time while maintaining stability.
+<p>In this transfer function, the numerator <code>1 - z<sup>-1</sup></code> effectively implements a high-pass filter that subtracts the previous input signal from the current one, thereby filtering out signals that do not change over time (i.e., stationary objects). The denominator <code>1 - 0.9z<sup>-1</sup></code> introduces a pole near the origin, which allows the filter to emphasize changes or motion over time while maintaining stability.</p>
 <center><img src="images/clutter_removal.jpg" alt="range doppler response" width="500" height="400"></center>
 
