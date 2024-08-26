@@ -79,3 +79,6 @@ Other variants of MTI usnig different transfer functions such as :
 <p>In this transfer function, the numerator <code>1 - z<sup>-1</sup></code> effectively implements a high-pass filter that subtracts the previous input signal from the current one, thereby filtering out signals that do not change over time (i.e., stationary objects). The denominator <code>1 - 0.9z<sup>-1</sup></code> introduces a pole near the origin, which allows the filter to emphasize changes or motion over time while maintaining stability.</p>
 <center><img src="images/clutter_removal.jpg" alt="range doppler response" width="500" height="400"></center>
 
+<h2>Demonstration video </h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XF3oPDqykLk?si=W5eYE1VSvEXhU-L7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
