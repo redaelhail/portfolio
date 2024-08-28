@@ -27,7 +27,6 @@ params:
   DateFormat: "Mon January 2, 2006"
   defaultTheme: light # dark, light
   disableThemeToggle: false
-
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -43,6 +42,7 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: false
+  mainsections: ['blog']
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -57,7 +57,7 @@ params:
     text: "Reda El Hail"
   # profile-mode
   profileMode:
-    enabled: True # needs to be explicitly set
+    enabled: False # needs to be explicitly set
     title: Machine learning Phd researcher
     subtitle: 
     imageUrl: 'pic.jpg'
@@ -68,9 +68,11 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there"
-    Content: Welcome
-
+    Title: Hi there 👋
+    Content: As a PhD researcher and a teaching assistant at KU Leuven, I am pursuing my passion for developing innovative solutions using machine learning and signal processing.
+    imageUrl: 'pic.jpg'
+    imageWidth: 180
+    imageHeight: 180
   socialIcons:
     - name: twitter
       url: "https://twitter.com/redaelhail"
@@ -93,9 +95,11 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
+    hidden: false # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
+    linkFullImages: true
+    responsiveImages: true
 
 
   # for search
