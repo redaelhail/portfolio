@@ -2,6 +2,11 @@
 title: Regularization techniques
 date: 2023-08-11T19:51:35Z
 draft: false
+cover:
+  image: "cover.png"
+  alt: "<alt text>"
+  caption: "<text>"
+  relative: false
 ---
 
 Regularization is a widely used technique since it  brings a positive impact on the model's performance. However, there are many methods of regularization. I will try to go through some of them in this post.
