@@ -5,7 +5,7 @@ draft: false
 markup: html
 tags: [Machine Learning, Python, C, Docker]
 cover:
-  image: "demo.png"
+  image: "cnn_architecture.png"
   alt: "<alt text>"
   caption: "<text>"
   relative: false # To use relative path for cover image, used in hugo Page-bundles
