@@ -3,6 +3,11 @@ title: "Radar signal processing for target detection and tracking"
 date: 2024-08-11T10:33:41Z
 draft: false
 markup: html
+cover:
+  image: "images/cover.png"
+  alt: "<alt text>"
+  caption: "<text>"
+  relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
 
 <p> Frequency Modulated Continuous Wave Radar (FMCW) is a sensor widely used in <a href="https://dev.ti.com/tirex/explore/node?node=A__AHbHS9Bx3XPwFpb927.8dw__radar_toolbox__1AslXXD__LATEST">different applications</a>. However, processing the FMCW might be challenging at first look. In this blogpost, I will try to go over all the steps of radar signal processing. Before that, some concepts will be explained to give an idea how FMCW radar data looks like.</p>

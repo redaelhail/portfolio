@@ -3,6 +3,11 @@ title: "Docker for code developement and deployement on a RaspberryPi"
 date: 2023-09-07T07:26:41Z
 draft: false
 tags: [Docker]
+cover:
+  image: "Docker - Raspberry Pi 4 _2.jpg"
+  alt: "<alt text>"
+  caption: "<text>"
+  relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
 
 ## Intro
