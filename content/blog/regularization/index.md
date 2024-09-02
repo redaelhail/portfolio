@@ -16,6 +16,8 @@ Regularization is a widely used technique since it  brings a positive impact on 
 
 Regularization is a technique that helps a machine learning model avoid overfitting and enhance it generalization capabilities over unseen data.
 
+![alt Overfitting figure](cover.png "Overfitting ")
+
 ##  ***Regularization techniques***
 
 ### 1. **L1, L2 regularization**

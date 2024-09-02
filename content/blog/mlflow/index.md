@@ -16,3 +16,5 @@ cover:
 The attached slides further elucidate key concepts and implementation strategies discussed during the session, providing a valuable resource for continued exploration and implementation of MLflow in real-world projects.
 </p>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRiya-S6RJN50h2oit2i7Whbk-IEWWp20sSv8Nl0liRtrrqsPE-Or8W1S9PntTYm1C5Tk29g-5oC3Qm/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rVLlGQcXgOQ?si=HZQmfjG61AZvKRCY&amp;start=16393" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
