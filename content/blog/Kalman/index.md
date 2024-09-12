@@ -10,7 +10,21 @@ cover:
   caption: "<text>"
   relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
+Kalman filtering is a powerful algorithm used for estimating the state of a dynamic system from noisy measurements. It was developed by Rudolf Kalman in 1960 and has since found wide applications in various fields including navigation, robotics, and signal processing.
+The Kalman filter works by combining two sources of information:
 
+Predictions based on a mathematical model of the system
+Measurements from sensors
+
+Key features of Kalman filtering include:
+
+Recursive nature: It doesn't need to store all past data, making it computationally efficient
+Optimal estimation: Under certain conditions, it provides the best possible estimate
+Handling uncertainty: It accounts for both measurement and process noise
+
+Kalman filters are particularly useful in situations where the system state cannot be directly observed, but indirect and potentially imperfect measurements are available.
+
+In this article, I will show different types of Kalman filters with examples and Matlab code. For access to all the code examples discussed here, please visit the associated GitHub repository: https://github.com/redaelhail/Kalman-filter-variations
 
 <h2>Linear Kalman Filter</h2>
 
