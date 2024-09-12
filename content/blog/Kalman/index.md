@@ -30,7 +30,7 @@ Kalman filters are particularly useful in situations where the system state cann
 
 In this article, I will show different types of Kalman filters with examples and Matlab code. For access to all the code examples discussed here, please visit the associated GitHub <a href="https://github.com/redaelhail/Kalman-filter-variations
 ">repository</a>
-<h2>id = "Linear Kalman Filter"</h2>
+<h2>Linear Kalman Filter</h2>
 
 <h3>Stock price tracking</h3>
 
