@@ -1,5 +1,5 @@
 ---
-title: "Kalman filtering: Linear, Extended, Unscented"
+title: "Kalman filtering: Linear, Extended"
 date: 2024-09-12T07:21:52Z
 draft: false
 markup: html
@@ -15,7 +15,7 @@ The Kalman filter works by combining two sources of information:
 <l>
     <li>Predictions based on a mathematical model of the system </li>
     <li>Measurements from sensors </li>
-
+    
 </l>
 
 
