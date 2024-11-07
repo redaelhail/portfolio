@@ -1,20 +1,23 @@
 ---
 title: "Docker for code developement and deployement on a RaspberryPi"
-date: 2023-09-07T07:26:41Z
+date: 2024-10-07T07:26:41Z
 draft: false
 tags: [Docker]
 cover:
-  image: "Docker - Raspberry Pi 4 _2.jpg"
+  image: "Pictu.png"
   alt: "<alt text>"
   caption: "<text>"
   relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
 
+
+![alt text](./Pictu.png)
+
 ## Intro
 
-Lately, I had to develop a demo working on a raspberrypi and send it to some project partners. However, it was very difficult in the beginning, since whenever I change something and push it to GitHub, they were not aware of that, and also faced problems with dependecies sometimes. So I decided to solve this problem and use a Docker container.
+Lately, I had to develop a demo working on a raspberrypi and send it to other project partners. However, we faced many difficulties in the beginning, since whenever I change something and push it to GitHub, they were not aware of that, and also faced problems with dependecies sometimes to make the demo work on their devices. So I decided to solve this problem and use a Docker container. I knew that with Docker you can run any application on any environemnt. But I was not aware it could also work on a Raspebrry Pi.
 
-The first step was to check if Docker runs on RaspberryPi, which is the case. Then, I used the same Docker container and use on my laptop with a bind mount to develop code on the computer. It's much more easier. Finally when the demo is working on the laptop, I push it to GitHub, and a GitHub action is automatically making a new Docker image and build it in Docker Hub. This image can be then pulled by the rasperrypi and garenteed to work.
+Moreover, Docker bind mounts allow for code developement. This is what I used to develop code on laptop first. Then when the demo is working, it is pushed to GitHub. A GitHub action workflow is automatically activated on every push action. This github worflow builds a  Docker image and publish it in Docker Hub. This image can be then pulled by the rasperrypi and garenteed to work.
 
 This was a high level description. Let's get into the steps I followed. 
 
@@ -68,6 +71,45 @@ Once the Dockerfile and compose file  are ready, it is possible to edit code on 
 
 In other words, starting a container with bind mounts allows to use a container to run tools that we don't want to install on our host, and yet still work with our host's files.
 
+
+
 ## 4. Run
 
 Finally, launching the demo is simply done with a single command: `docker compose up`
+
+## 5. CI pipeline
+
+GitHub Actions is a CI/CD tool that we'll use to automate our pipeline. I first create a new file .github/workflows/ci.yml in the project repository with the following contents
+
+    name: ci
+
+    on:
+      push:
+        branches:
+          - main
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          -
+            name: Checkout
+            uses: actions/checkout@v4
+          -
+            name: Login to Docker Hub
+            uses: docker/login-action@v3
+            with:
+              username: ${{ secrets.DOCKER_USERNAME }}
+              password: ${{ secrets.DOCKERHUB_TOKEN }}
+          -
+            name: Set up Docker Buildx
+            uses: docker/setup-buildx-action@v3
+          -
+            name: Build and push
+            uses: docker/build-push-action@v5
+            with:
+              context: .
+              push: true
+              tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+
+This workflow will run on every push to the main branch. It first checks the latest code version from the repository, then it logs in to Docker hub. Afterwards, it builds and pushs the Docker image to container registry DockerHub.
