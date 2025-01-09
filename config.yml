@@ -122,6 +122,7 @@ menu:
       name: Blog
       url: /blog/
       weight: 30
-    
-    
-    
+    - identifier: cv
+      name: Cv
+      url: /reda_elhail.pdf
+      weight: 30
