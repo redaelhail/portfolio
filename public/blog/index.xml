@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogs on Reda El Hail</title>
+    <link>https://redaelhail.github.io/portfolio/blog/</link>
+    <description>Recent content in Blogs on Reda El Hail</description>
+    <image>
+      <url>https://avatars.githubusercontent.com/u/29822993?s=400&u=84cf5c59f9a2d42ed32ae0a1f523de81f418b53f&v=4</url>
+      <link>https://avatars.githubusercontent.com/u/29822993?s=400&u=84cf5c59f9a2d42ed32ae0a1f523de81f418b53f&v=4</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://redaelhail.github.io/portfolio/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Cheat Sheet</title>
+      <link>https://redaelhail.github.io/portfolio/blog/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redaelhail.github.io/portfolio/blog/first/</guid>
+      <description>Containers Stop all Docker containers Stop all Docker containers:
+docker kill $(docker ps -q) Remove all Docker containers Remove all Docker containers:
+docker rm $(docker ps -a -q) Remove all Docker images Remove all Docker images:
+docker rmi $(docker images -q) The -q flag will only list the IDs for those containers.
+Volumes Create volume Create volume:
+docker volume create name_volume This will automatically create a volume mounted on the specified container:</description>
+    </item>
+    
+    <item>
+      <title>Radar human activity recognition with machine learning</title>
+      <link>https://redaelhail.github.io/portfolio/blog/phd_demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redaelhail.github.io/portfolio/blog/phd_demo/</guid>
+      <description>These videos show a demonstration of indoor human activity recognition using FMCW radar and machine learning. The radar is placed in h roof and it has a field of view covering 120 degrees in all directions.
+The schematic below shows the full system from the sensor node to the cloud.
+This demo runs a convolutional neural network that was trained on a previously collected dataset in the same environment with different people.</description>
+    </item>
+    
+    <item>
+      <title>Visualization of different optimization algorithms used in deep learning</title>
+      <link>https://redaelhail.github.io/portfolio/blog/loss_function/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://redaelhail.github.io/portfolio/blog/loss_function/</guid>
+      <description>1. Gradient Descent
+Equation:
+θ = θ - α * ∇J(θ)
+Description:
+θ: Parameters (weights) of the model being optimized.
+α (alpha): Learning rate, determines the size of the steps taken during optimization.
+∇J(θ): Gradient of the cost function with respect to the parameters.
+2. Stochastic Gradient Descent (SGD)
+Equation:
+θ = θ - α * ∇J(θ, xi, yi)
+Description:
+θ: Parameters (weights) of the model being optimized.
+α (alpha): Learning rate, determines the size of the steps taken during optimization.</description>
+    </item>
+    
+  </channel>
+</rss>
