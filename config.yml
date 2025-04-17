@@ -1,0 +1,128 @@
+baseURL: "/"
+languageCode: 'en-us'
+title: Reda El Hail
+paginate: 5
+theme: PaperMod
+
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Reda El Hail
+  description: "Blog & Portfolio"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["https://avatars.githubusercontent.com/u/29822993?s=400&u=84cf5c59f9a2d42ed32ae0a1f523de81f418b53f&v=4"]
+  DateFormat: "Mon January 2, 2006"
+  defaultTheme: light # dark, light
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  mainsections: ['blog']
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Reda El Hail"
+  # profile-mode
+  profileMode:
+    enabled: False # needs to be explicitly set
+    title: Machine learning Phd researcher
+    subtitle: 
+    imageUrl: 'pic.jpg'
+    imageWidth: 180
+    imageHeight: 180
+    imageTitle: my image
+    buttons:      
+
+  # home-info mode
+  homeInfoParams:
+    Title: Hi there 👋
+    Content: As a PhD researcher and a teaching assistant at KU Leuven, I am pursuing my passion for developing innovative solutions using machine learning and signal processing.
+    imageUrl: 'pic.jpg'
+    imageWidth: 180
+    imageHeight: 180
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/redaelhail"
+    - name: github
+      url: "https://github.com/redaelhail"
+    - name: orcid
+      url: "https://orcid.org/0000-0001-9369-0810"
+    - name: linkedin
+      url: "https://linkedin.com/in/reda-el-hail-276874127"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/9802019/reda-el-hail?tab=topactivity"
+
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+    linkFullImages: true
+    responsiveImages: true
+
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 30
+    - identifier: cv
+      name: Cv
+      url: /reda_elhail.pdf
+      weight: 30

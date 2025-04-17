@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: redaelhail.github.io/blog-website/sitemap.xml
