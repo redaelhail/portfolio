@@ -3,7 +3,7 @@ title: "Kalman filtering: Linear, Extended"
 date: 2024-09-12T07:21:52Z
 draft: false
 markup: html
-tags: [Machine Llearning]
+tags: [Machine Learning]
 cover:
   image: "EKF_example.jpg"
   alt: "<alt text>"

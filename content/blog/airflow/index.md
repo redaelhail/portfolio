@@ -1,7 +1,7 @@
 ---
-title: "Docker for code developement and deployement on a RaspberryPi"
-date: 2025-3-07T09:26:41Z
-draft: true
+title: "Airflow"
+date: 2025-2-07T09:26:41Z
+draft: f
 tags: [Docker]
 cover:
   image: "demo_grid_view.png"
